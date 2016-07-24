@@ -1,0 +1,15 @@
+﻿@model object
+
+<div class="form-group @(Html.ValidationErrorFor(m => m, " has-error"))">
+    @Html.LabelFor(m => m, new { @class = "control-label col-md-3" })
+    <div class="col-md-9">
+        @Html.TextBoxFor(m => m, new
+       {
+           @class = "form-control",
+           @type = "tel"
+           //@type = "tel",
+           //pattern = @"[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}"
+       })
+        @Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" })
+    </div>
+</div>

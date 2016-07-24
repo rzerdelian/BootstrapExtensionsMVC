@@ -1,0 +1,12 @@
+﻿
+@model DateTime?
+
+<div class="form-group @(Html.ValidationErrorFor(m => m, " has-error"))">
+    @Html.LabelFor(m => m, new { @class = "control-label col-md-3" })
+    <div class="col-md-9">
+        @Html.TextBoxFor(m => m, new { @class = "form-control datepicker", data_date_format="MM/DD/YYYY", data_date_show_today_button="true", data_date_show_clear="true" })
+        @Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" })
+    </div>
+</div>
+
+@*data-date-format="YYYY/MM/DD HH:mm" data-date-show-today-button="true" data-date-show-clear="true"*@

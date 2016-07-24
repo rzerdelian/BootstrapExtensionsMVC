@@ -1,0 +1,392 @@
+﻿@model BootstrapTester.Models.BootstrapSampleObject
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <style type="text/css">
+        body {
+            position: relative;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".nav.affix">
+    <div class="container">
+        <div class="navbar navbar-default">
+            <div class="navbar-brand">Bootstrap Tester</div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="navbar-link" href="~/Default/Index">Template</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-md-10">
+
+
+
+                    @using (Html.Bootstrap().BeginRow(new { id = "Labels" }))
+                    {
+                        <h1>Labels</h1>
+
+                        using (Html.Bootstrap().BeginColumn())
+                        {
+                            for (int i = 1; i <= 6; i++)
+                            {
+                                @Html.Raw("<h" + @i + ">")
+                                @Html.Bootstrap().Label("h" + @i + "", Colors.Info)
+                                @Html.Raw("</h" + @i + ">")
+                            }
+
+                            foreach (var color in Model.Colors)
+                            {
+                                @Html.Bootstrap().Label(color.Key, color.Value)
+                            }
+                        }
+                    }
+
+
+
+                    @using (Html.Bootstrap().BeginRow(new { id = "Buttons" }))
+                    {
+                        <h1>Buttons</h1>
+
+                        using (Html.Bootstrap().BeginColumn(ColumnLengths.Half))
+                        {
+                            <h4>Button Styles</h4>
+                            foreach (var style in Model.ButtonStyles)
+                            {
+                                @Html.Bootstrap().Button(style.Key, style.Value)
+                            }
+                        }
+
+                        using (Html.Bootstrap().BeginColumn(ColumnLengths.Half))
+                        {
+                            <h4>Button Sizes</h4>
+                            foreach (var size in Model.ButtonSizes)
+                            {
+                                @Html.Bootstrap().Button(size.Key, ButtonStyles.Default, size.Value)
+                            }
+                        }
+                    }
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Disabled</h4>
+                            @foreach (var bs in Model.ButtonStyles)
+                            {
+                                @Html.Bootstrap().Button(bs.Key, bs.Value).AsDisabled()
+                            }
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="btn-group">
+                                @for (int i = 0; i < 5; i++)
+                                {
+                                    @Html.Bootstrap().Button("Button " + i, ButtonStyles.Primary);
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Button Extensions</h4>
+
+                            @Html.Bootstrap().Button("With Badge").AddBadge(12)
+                            @Html.Bootstrap().Button("Open Modal", ButtonStyles.Info).OpenModal("#modalSample")
+                            @using (Html.Bootstrap().BeginModal("modalSample", "Modal Header", Colors.Info))
+                            {
+                                <p>this is the body</p>
+                            }
+                            @Html.Bootstrap().Button("Tool Tip").AddTooltip("some tool tip message")
+                            @Html.Bootstrap().Button("Popover").AddPopover("PO Title", "message")
+                            @Html.Bootstrap().Button("With Icon", ButtonStyles.Success).AddIcon(FontAwesomeIconSet.Beer)
+
+                            @Html.Bootstrap().Dropdown("Dropdown 2",
+                                new ListItem[] {
+                                Html.Bootstrap().ListItem("Item 1", "#"),
+                                Html.Bootstrap().ListItem("Item 2", "#") }, ButtonStyles.Success)
+
+                            @using (Html.Bootstrap().BeginDropdown("dropdown"))
+                            {
+                                @Html.Bootstrap().ListItem("Item 1", "#")
+                                @Html.Bootstrap().ListItem("Item 2", "#")
+                            }
+                        </div>
+                    </div>
+
+
+
+                    <div class="row" id="ActionLinks">
+                        <h1>Action Links</h1>
+
+                        <div class="col-md-12">
+
+                            <p>
+                                @Html.Bootstrap().ActionLink("Action Link")
+                                @Html.Bootstrap().ActionLink("Action Link w/icon").AddIcon(FontAwesomeIconSet.Beer)
+                            </p>
+
+                            <h4>Action Links as Buttons</h4>
+                            <p>
+                                @foreach (var style in Model.ButtonStyles)
+                                {
+                                    @Html.Bootstrap().ActionLink(style.Key).AsButton(style.Value)
+                                }
+                            </p>
+
+                            <h4>Action Links as Buttons w/icons</h4>
+                            <p>
+                                @foreach (var style in Model.ButtonStyles)
+                                {
+                                    @Html.Bootstrap().ActionLink(style.Key).AsButton(style.Value).AddIcon(FontAwesomeIconSet.Beer)
+                                }
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="row" id="Alerts">
+                        <h1>Alerts</h1>
+                        <div class="col-md-6">
+                            <h4>Inline Alerts</h4>
+                            @{var alertDic = Model.CreateDictionary<AlertStyles>();}
+                            @foreach (var item in alertDic)
+                            {
+                                @Html.Bootstrap().Alert("Inline alert", item.Value, true)
+                            }
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Using block</h4>
+                            @foreach (var item in alertDic)
+                            {
+                                using (Html.Bootstrap().BeginAlert(item.Value, true))
+                                {
+                                    <p>alert with @item.Key style</p>
+                                }
+                            }
+                        </div>
+                    </div>
+
+                    @*@using (Html.Bootstrap().BeginRow())
+                        {
+                            using (Html.Bootstrap().BeginColumn(length: ColumnLengths.Half))
+                            {
+                                <h4>Dropdowns</h4>
+                                using (Html.Bootstrap().BeginDropdown("dropdown"))
+                                {
+                                    @Html.Bootstrap().ListItem("Item 1", "#")
+                                    @Html.Bootstrap().ListItem("Item 2", "#")
+                                }
+                            }
+
+                            @Html.Bootstrap().Column(
+                            new IHtmlString[] {
+                                new MvcHtmlString("<h4>Dropdowns - inline</h4>"),
+                                Html.Bootstrap().Dropdown("Dropdown 2",
+                                    new ListItem[] {
+                                        Html.Bootstrap().ListItem("Item 1", "#"),
+                                        Html.Bootstrap().ListItem("Item 2", "#") })
+                            },
+                            ColumnLengths.Half)
+                        }*@
+
+
+                    @*<h3>test inline row</h3>
+
+                            @Html.Bootstrap().Row(null, new Column[] {
+                                new Column(length: ColumnLengths.Half, children: new IHtmlString[] { new MvcHtmlString("col 1 - text 1"), new MvcHtmlString("col 1 - text 2") }),
+                                new Column(length: ColumnLengths.Half, children: new IHtmlString[] { new MvcHtmlString("col 2"), Html.Bootstrap().Label("label") })
+                            })
+
+                            <h3>test inline row 2</h3>
+                            @Html.Bootstrap().Row(children: new Column[] {
+                        new Column(new MvcHtmlString("Column 1"), ColumnLengths.Half),
+                        new Column(new MvcHtmlString("Column 2"), ColumnLengths.Half)
+                        })
+
+                            <h3>test inline row 3</h3>
+                            @Html.Bootstrap().Row(children: new Column[] {
+                        new Column(@Html.Bootstrap().Button("button", ButtonStyles.Primary).AddIcon(FontAwesomeIconSet.Beer), ColumnLengths.Half),
+                        new Column(new MvcHtmlString("Column 2"), ColumnLengths.Half)
+                        })*@
+
+                    <h3>test inline row with block quotes</h3>
+                    @Html.Bootstrap().Row(children: new Column[] {
+                        new Column(Html.Bootstrap().Blockquote("Something profound", "anonymous"), ColumnLengths.Half),
+                        new Column(Html.Bootstrap().Blockquote("Something profound", "anonymous", true), ColumnLengths.Half)
+                    })
+
+
+                    <div class="row" id="Panels">
+                        <h1>Panels</h1>
+                        <div class="col-md-6">
+                            @{
+                                var colorIx = 0;
+                            }
+
+                            @foreach (var color in Model.Colors)
+                            {
+                                using (Html.Bootstrap().BeginPanel(new PanelTitle("header - " + color.Key, HeadingTypes.H2), true, color.Value))
+                                {
+                                    <p>this is the body</p>
+                                }
+                                colorIx++;
+
+                                if (colorIx == 3)
+                                {
+                                    @Html.Raw("</div><div class=\"col-md-6\">")
+                                }
+                            }
+
+                        </div>
+                    </div>
+
+                    @{
+                        using (Html.Bootstrap().BeginRow(new { id = "EditorTemplates" }))
+                        {
+                            using (Html.Bootstrap().BeginColumn())
+                            {
+                                <h3>Editor Templates</h3>
+                                <div class="form-horizontal">
+                                    @using (Html.BeginForm())
+                                    {
+                                        @Html.EditorFor(m => m.Name)
+                                        @Html.EditorFor(m => m.Name, "text", "name2", new { format = "4-8" })
+                                        @Html.EditorFor(m => m.Email)
+                                        @Html.EditorFor(m => m.CreateDate)
+                                        @Html.EditorFor(m => m.Date)
+                                        @Html.EditorFor(m => m.Time)
+                                        @Html.EditorFor(m => m.Id)
+                                        @Html.EditorFor(m => m.BooleanOption)
+
+                                        @Html.EditorFor(m => m.BooleanOption, "boolean", "bool2", new { checkboxStyle = "checkbox-success" })
+
+                                        @Html.EditorFor(m => m.ColorsEnum)
+                                        @Html.EditorFor(m => m.Currency)
+                                        @Html.EditorFor(m => m.Decimal)
+                                        @Html.EditorFor(m => m.Password)
+                                        @Html.EditorFor(m => m.PhoneNumber)
+                                        @Html.EditorFor(m => m.Website)
+
+                                        @Html.EditorFor(m => m.Multiline)
+
+                                        @Html.Bootstrap().Button("Submit", ButtonStyles.Primary, ButtonSizes.Default, ButtonTypes.Submit)
+                                    }
+                                </div>
+                            }
+                        }
+                    }
+
+
+                    <div class="row" id="Navs">
+                        <h1>Navs</h1>
+
+                        @foreach (var navType in Model.CreateDictionary<NavTypes>())
+                        {
+                            <div class="col-md-4">
+
+                                <h4>@navType.Key</h4>
+                                @Html.Bootstrap().Nav(new NavItem[] {
+                                    new NavItem("Link 1", "#").AsActive(),
+                                    new NavItem("Link 2", "#"),
+                                    new NavItem("Link 3", "#")
+                                }, navType.Value)
+                            </div>
+                        }
+                    </div>
+
+                    <p></p>
+                    <div class="jumbotron">
+                        Footer
+                    </div>
+
+                </div>
+
+                <div class="col-md-2">
+                    <p>bs nav</p>
+                    @{
+
+                        var links = new NavItem[] {
+                            new NavItem("Labels", "#Labels"),
+                            new NavItem("Buttons", "#Buttons"),
+                            new NavItem("Modals", "#Modals"),
+                            new NavItem("Alerts", "#Alerts"),
+                            new NavItem("Panels", "#Panels"),
+                            new NavItem("Editor Templates", "#EditorTemplates"),
+                            new NavItem("Navs", "#Navs")
+                        };
+
+                        @Html.Bootstrap().Nav(links, NavTypes.PillsVertical, true)
+                    }
+
+
+                    @*<p>html nav</p>
+                        <ul class="nav affix" id="sideNav">
+                            <li class="active">
+                                <a href="#Labels">Labels</a>
+                            </li>
+                            <li>
+                                <a href="#Buttons">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="#Modals">Modals</a>
+                            </li>
+                            <li>
+                                <a href="#Alerts">Alerts</a>
+                            </li>
+                            <li>
+                                <a href="#Panels">Panels</a>
+                            </li>
+                            <li>
+                                <a href="#EditorTemplates">Editor Templates</a>
+                            </li>
+                        </ul>*@
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('body').scrollspy({ target: '.nav.affix' })
+
+            $(".datetimepicker").datetimepicker();
+            //$(".datepicker").datetimepicker({ format: "MM/DD/YYYY" });
+            $(".datepicker").datetimepicker();
+            $(".timepicker").datetimepicker({ format: "h:mm A" });
+
+            $('[data-toggle="popover"]').popover()
+        });
+    </script>
+
+</body>
+
+
+
+
+
+
+
+</html>
+
