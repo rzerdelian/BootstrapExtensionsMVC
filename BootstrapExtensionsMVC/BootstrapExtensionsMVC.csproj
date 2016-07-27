@@ -130,6 +130,7 @@
     <Compile Include="Helpers\BootstrapExtensions.cs" />
     <Compile Include="Helpers\Helpers.cs" />
     <Compile Include="Helpers\HtmlBootstrapHelper.cs" />
+    <Compile Include="Helpers\RazorBasePage.cs" />
     <Compile Include="Helpers\Validation.cs" />
     <Compile Include="Models\ActionLink.cs" />
     <Compile Include="Models\Alert.cs" />

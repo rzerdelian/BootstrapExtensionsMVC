@@ -104,9 +104,11 @@ namespace BootstrapExtensionsMVC.Models
         }
     }
 
-    public abstract class BootstrapContainer<TModel> : BootstrapComponent, IDisposable
+    public abstract class BootstrapContainer : BootstrapComponent, IDisposable
     {
-        protected HtmlHelper<TModel> helper;
+        //protected HtmlHelper<TModel> helper;
+
+        protected ViewContext viewContext;
 
         //internal BootstrapContainer(HtmlHelper<TModel> helper, Tags tag, BootstrapElements type, object htmlAttributes = null) : base(tag, type)
         //{
@@ -115,10 +117,10 @@ namespace BootstrapExtensionsMVC.Models
         //        Attributes = (IDictionary<string, object>)HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes);
         //}
 
-        internal BootstrapContainer(HtmlHelper<TModel> helper, Tags tag, BootstrapElements type, object htmlAttributes = null, IEnumerable<IHtmlString> children = null)
+        internal BootstrapContainer(ViewContext viewContext, Tags tag, BootstrapElements type, object htmlAttributes = null, IEnumerable<IHtmlString> children = null)
             : base(tag, type)
         {
-            this.helper = helper;
+            this.viewContext = viewContext;
             if (htmlAttributes != null)
                 Attributes = (IDictionary<string, object>)HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes);
 
@@ -129,16 +131,15 @@ namespace BootstrapExtensionsMVC.Models
         protected internal void StartTag()
         {
             PrepareTagBuilder();
-            helper.ViewContext.Writer.Write(base.tb.ToString(TagRenderMode.StartTag));
+            viewContext.Writer.Write(base.tb.ToString(TagRenderMode.StartTag));
             if (!string.IsNullOrEmpty(this.InnerHtml))
-                helper.ViewContext.Writer.Write(this.InnerHtml);
+                viewContext.Writer.Write(this.InnerHtml);
         }
-
-        
 
         public void Dispose()
         {
-            helper.ViewContext.Writer.Write(tb.ToString(TagRenderMode.EndTag));
+            if (viewContext != null)
+                viewContext.Writer.Write(tb.ToString(TagRenderMode.EndTag));
         }
     }
 }

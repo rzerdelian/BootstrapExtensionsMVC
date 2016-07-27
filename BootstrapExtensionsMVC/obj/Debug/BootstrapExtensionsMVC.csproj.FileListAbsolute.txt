@@ -56,6 +56,5 @@ C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\b
 C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\bin\System.Web.Webpages.Razor.xml
 C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\bin\System.Web.Helpers.xml
 C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\bin\System.Web.Mvc.xml
-C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\obj\Debug\BootstrapExtensionsMVC.csprojResolveAssemblyReference.cache
 C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\obj\Debug\BootstrapExtensionsMVC.dll
 C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\obj\Debug\BootstrapExtensionsMVC.pdb

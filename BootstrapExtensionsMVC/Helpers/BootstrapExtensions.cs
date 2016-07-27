@@ -10,15 +10,23 @@ using System.Web.Routing;
 
 namespace BootstrapExtensionsMVC
 {
-    public class Bootstrap<TModel>
+
+    public class BootstrapHelper
     {
         #region internal
 
-        private readonly HtmlHelper<TModel> helper;
+        //private readonly HtmlHelper<TModel> helper;
 
-        internal Bootstrap(HtmlHelper<TModel> helper)
+        //internal Bootstrap(HtmlHelper<TModel> helper)
+        //{
+        //    this.helper = helper;
+        //}
+
+        private readonly ViewContext viewContext;
+
+        internal BootstrapHelper(ViewContext viewContext)
         {
-            this.helper = helper;
+            this.viewContext = viewContext;
         }
 
         #endregion
@@ -27,12 +35,12 @@ namespace BootstrapExtensionsMVC
 
         public ActionLink ActionLink(string linkText, string url = null, object htmlAttributes = null)
         {
-            return new ActionLink(this.helper, linkText, url, htmlAttributes);
+            return new ActionLink(this.viewContext, linkText, url, htmlAttributes);
         }
 
         public ActionLink ActionLink(string linkText, string actionName, string controllerName, object routeValues = null, object htmlAttributes = null)
         {
-            return new ActionLink(this.helper, linkText, actionName, controllerName, new RouteValueDictionary(routeValues), htmlAttributes);
+            return new ActionLink(this.viewContext, linkText, actionName, controllerName, new RouteValueDictionary(routeValues), htmlAttributes);
         }
 
         public Button Button(string text, ButtonStyles style= ButtonStyles.Default, ButtonSizes size = ButtonSizes.Default, ButtonTypes type = ButtonTypes.Button, object htmlAttributes = null)
@@ -60,9 +68,9 @@ namespace BootstrapExtensionsMVC
             return new ListItem(text, link, isHeading, isDisabled);
         }
 
-        public Dropdown2<TModel> Dropdown(string text, IEnumerable<ListItem> items, ButtonStyles style = ButtonStyles.Default)
+        public Dropdown Dropdown(string text, IEnumerable<ListItem> items, ButtonStyles style = ButtonStyles.Default)
         {
-            return new Dropdown2<TModel>(helper, text, items, style);
+            return new Dropdown(viewContext, text, items, style);
         }
 
         #endregion
@@ -76,22 +84,22 @@ namespace BootstrapExtensionsMVC
 
         public IHtmlString Alert(string text, AlertStyles style = AlertStyles.Danger, bool dismissable = true)
         {
-            return new Alert<TModel>(this.helper, style, text, dismissable);
+            return new Alert(viewContext, style, text, dismissable);
         }
 
         public IHtmlString Row(object htmlAttributes = null, IEnumerable<IHtmlString> children = null)
         {
-            return new Row<TModel>(helper, htmlAttributes, children);
+            return new Row(viewContext, htmlAttributes, children);
         }
 
         public IHtmlString Column(IEnumerable<IHtmlString> children, ColumnLengths length = ColumnLengths.Full, ColumnSizes size = ColumnSizes.Medium, object htmlAttributes = null)
         {
-            return new Column<TModel>(helper, size, length, htmlAttributes, children);
+            return new Column(viewContext, size, length, htmlAttributes, children);
         }
 
         public IHtmlString Column(IHtmlString child, ColumnLengths length = ColumnLengths.Full, ColumnSizes size = ColumnSizes.Medium, object htmlAttributes = null)
         {
-            return new Column<TModel>(helper, size, length, htmlAttributes, new IHtmlString[] { child });
+            return new Column(viewContext, size, length, htmlAttributes, new IHtmlString[] { child });
         }
 
         public IHtmlString Blockquote(string quote, string source, bool reverse = false)
@@ -105,32 +113,32 @@ namespace BootstrapExtensionsMVC
 
         public IDisposable BeginDropdown(string text, ButtonStyles style = ButtonStyles.Default)
         {
-            return new Dropdown2<TModel>(helper, text, style);
+            return new Dropdown(viewContext, text, style);
         }
 
         public IDisposable BeginAlert(AlertStyles style = AlertStyles.Warning, bool dismissable = false, object htmlAttributes = null)
         {
-            return new Alert<TModel>(this.helper, style, null, dismissable, htmlAttributes);
+            return new Alert(this.viewContext, style, null, dismissable, htmlAttributes);
         }
 
         public IDisposable BeginModal(string id, string headerText = null, Colors color = Colors.Default)
         {
-            return new Modal<TModel>(helper, id, headerText, color);
+            return new Modal(viewContext, id, headerText, color);
         }
 
         public IDisposable BeginRow(object htmlAttributes = null)
         {
-            return new Row<TModel>(helper, htmlAttributes);
+            return new Row(viewContext, htmlAttributes);
         }
 
         public IDisposable BeginColumn(ColumnLengths length = ColumnLengths.Full, ColumnSizes size = ColumnSizes.Medium, object htmlAttributes = null)
         {
-            return new Column<TModel>(helper, size, length, htmlAttributes);
+            return new Column(viewContext, size, length, htmlAttributes);
         }
 
         public IDisposable BeginPanel(IHtmlString headerHtml = null, bool showHeader = false, Colors color = Colors.Default, IHtmlString footerHtml = null, bool showFooter = false)
         {
-            return new Panel<TModel>(helper, headerHtml, showHeader, color, footerHtml, showFooter);
+            return new Panel(viewContext, headerHtml, showHeader, color, footerHtml, showFooter);
         }
 
         #endregion

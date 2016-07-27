@@ -7,13 +7,13 @@ using System.Web.Mvc;
 
 namespace BootstrapExtensionsMVC.Models
 {
-    public class Modal<TModel> : BootstrapContainer<TModel>, IDisposable
+    public class Modal : BootstrapContainer, IDisposable
     {
         
         TagBuilder footerTag = new TagBuilder("div");
 
-        internal Modal(HtmlHelper<TModel> helper, string id, string headerText = null, Colors color = Colors.Default)
-            : base(helper, Tags.Div, BootstrapElements.Modal)
+        internal Modal(ViewContext viewContext, string id, string headerText = null, Colors color = Colors.Default)
+            : base(viewContext, Tags.Div, BootstrapElements.Modal)
         {
 
             AddCssClass("fade");
@@ -45,7 +45,7 @@ namespace BootstrapExtensionsMVC.Models
 
         void IDisposable.Dispose()
         {
-            helper.ViewContext.Writer.Write("</div>"); //closes body tag
+            viewContext.Writer.Write("</div>"); //closes body tag
 
             //if (hideFooter == false)
             //{
@@ -53,8 +53,8 @@ namespace BootstrapExtensionsMVC.Models
                 //helper.ViewContext.Writer.Write("<div class=\"{0}-footer\">{1}</div>", elementType.DisplayName(), b.ToHtmlString());
             //}
 
-            helper.ViewContext.Writer.Write("</div>"); //closes content tag
-            helper.ViewContext.Writer.Write("</div>"); //closes dialog tag
+            viewContext.Writer.Write("</div>"); //closes content tag
+            viewContext.Writer.Write("</div>"); //closes dialog tag
 
             base.Dispose();
         }

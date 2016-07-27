@@ -29,10 +29,10 @@ namespace BootstrapExtensionsMVC.Models
     //    }
     //}
 
-    public class Alert<TModel> : BootstrapContainer<TModel>
+    public class Alert : BootstrapContainer
     {
-        internal Alert(HtmlHelper<TModel> helper, AlertStyles style, string text = null, bool dismissable = false, object htmlAttributes = null) 
-            : base(helper, Tags.Div, BootstrapElements.Alert, htmlAttributes)
+        internal Alert(ViewContext viewContext, AlertStyles style, string text = null, bool dismissable = false, object htmlAttributes = null)
+            : base(viewContext, Tags.Div, BootstrapElements.Alert, htmlAttributes)
         {
             AddCssClass(style.DisplayName());
 

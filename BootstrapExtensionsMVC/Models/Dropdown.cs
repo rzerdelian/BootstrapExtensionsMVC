@@ -7,10 +7,10 @@ using System.Web.Mvc;
 
 namespace BootstrapExtensionsMVC.Models
 {
-    public class Dropdown2<TModel> : BootstrapContainer<TModel>, IDisposable
+    public class Dropdown : BootstrapContainer, IDisposable
     {
-        internal Dropdown2(HtmlHelper<TModel> helper, string text, ButtonStyles style = ButtonStyles.Default)
-            :base(helper, Tags.Div, BootstrapElements.Dropdown)
+        internal Dropdown(ViewContext viewContext, string text, ButtonStyles style = ButtonStyles.Default)
+            :base(viewContext, Tags.Div, BootstrapElements.Dropdown)
         {
             Button btn = new Button(text, style,
                 ButtonSizes.Default, ButtonTypes.Button, new { @class = "dropdown-toggle", data_toggle = "dropdown" })
@@ -22,8 +22,8 @@ namespace BootstrapExtensionsMVC.Models
             StartTag();
         }
 
-        internal Dropdown2(HtmlHelper<TModel> helper, string text, IEnumerable<ListItem> items, ButtonStyles style = ButtonStyles.Default) 
-            : base(helper, Tags.Div, BootstrapElements.Dropdown)
+        internal Dropdown(ViewContext viewContext, string text, IEnumerable<ListItem> items, ButtonStyles style = ButtonStyles.Default) 
+            : base(viewContext, Tags.Div, BootstrapElements.Dropdown)
         {
             Button btn = new Button(text, style,
                 ButtonSizes.Default, ButtonTypes.Button, new { @class = "dropdown-toggle", data_toggle = "dropdown" })
@@ -41,7 +41,7 @@ namespace BootstrapExtensionsMVC.Models
 
         void IDisposable.Dispose()
         {
-            helper.ViewContext.Writer.Write("</ul>");   //close dropdown menu
+            viewContext.Writer.Write("</ul>");   //close dropdown menu
             base.Dispose();
         }
     }

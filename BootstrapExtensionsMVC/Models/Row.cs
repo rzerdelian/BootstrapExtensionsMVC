@@ -8,10 +8,10 @@ using System.Web.Mvc;
 
 namespace BootstrapExtensionsMVC.Models
 {
-    public class Row<TModel> : BootstrapContainer<TModel>
+    public class Row : BootstrapContainer
     {
-        internal Row(HtmlHelper<TModel> helper, object htmlAttributes = null, IEnumerable<IHtmlString> columns = null) 
-            : base(helper, Tags.Div, BootstrapElements.Row, htmlAttributes, columns)
+        internal Row(ViewContext viewContext, object htmlAttributes = null, IEnumerable<IHtmlString> columns = null)
+            : base(viewContext, Tags.Div, BootstrapElements.Row, htmlAttributes, columns)
         {
             if (columns == null)
                 StartTag();

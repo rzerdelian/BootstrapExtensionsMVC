@@ -12,9 +12,14 @@ namespace BootstrapExtensionsMVC
 {
     public static class HtmlBootstrapHelper
     {
-        public static Bootstrap<TModel> Bootstrap<TModel>(this HtmlHelper<TModel> helper)
+        //public static Bootstrap<TModel> Bootstrap<TModel>(this HtmlHelper<TModel> helper)
+        //{
+        //    return new Bootstrap<TModel>(helper);
+        //}
+
+        public static BootstrapHelper Bootstrap(this HtmlHelper helper)
         {
-            return new Bootstrap<TModel>(helper);
+            return new BootstrapHelper(helper.ViewContext);
         }
 
         public static T AsButton<T>(this T element, ButtonStyles buttonStyle, ButtonSizes size = ButtonSizes.Default) where T : ActionLink

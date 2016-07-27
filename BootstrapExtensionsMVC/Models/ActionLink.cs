@@ -22,7 +22,7 @@ namespace BootstrapExtensionsMVC.Models
             InnerHtml = linkText;
         }
 
-        internal ActionLink(HtmlHelper htmlHelper, string linkText, string url, object htmlAttributes = null) 
+        internal ActionLink(ViewContext viewContext, string linkText, string url, object htmlAttributes = null) 
             : this(linkText, url, null)
             //: base(Tags.Anchor,  BootstrapElements.Link)
         {
@@ -34,18 +34,18 @@ namespace BootstrapExtensionsMVC.Models
             //InnerHtml = linkText;
         }
 
-        internal ActionLink(HtmlHelper htmlHelper, string linkText, string actionName = null, string controllerName = null, RouteValueDictionary routeValues = null, object htmlAttributes = null) 
+        internal ActionLink(ViewContext viewContext, string linkText, string actionName = null, string controllerName = null, RouteValueDictionary routeValues = null, object htmlAttributes = null) 
             : base(Tags.Anchor,  BootstrapElements.Link)
         {
             if (string.IsNullOrEmpty(actionName))
-                actionName = htmlHelper.ViewContext.RouteData.GetRequiredString("action");
+                actionName = viewContext.RouteData.GetRequiredString("action");
 
             if (string.IsNullOrEmpty(controllerName))
-                controllerName = htmlHelper.ViewContext.RouteData.GetRequiredString("controller");
+                controllerName = viewContext.RouteData.GetRequiredString("controller");
 
             InnerHtml = linkText;
             Attributes = (IDictionary<string, object>)HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes);
-            Attributes["href"] = UrlHelper.GenerateUrl(null, actionName, controllerName, routeValues, htmlHelper.RouteCollection, htmlHelper.ViewContext.RequestContext, false);
+            Attributes["href"] = UrlHelper.GenerateUrl(null, actionName, controllerName, routeValues, RouteTable.Routes, viewContext.RequestContext, false);
         }
     }
 }

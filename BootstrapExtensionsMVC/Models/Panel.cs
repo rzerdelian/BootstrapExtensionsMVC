@@ -8,13 +8,13 @@ using System.Web.Mvc;
 
 namespace BootstrapExtensionsMVC.Models
 {
-    public class Panel<TModel> : BootstrapContainer<TModel>, IDisposable
+    public class Panel : BootstrapContainer, IDisposable
     {
         private KeyValuePair<string, bool> footer;
         private TagBuilder bodyTB = new TagBuilder("div");
 
-        internal Panel(HtmlHelper<TModel> helper, IHtmlString headerHtml = null, bool showHeader = false, Colors color = Colors.Default, IHtmlString footerHtml = null, bool showFooter = false)
-            : base(helper, Tags.Div, BootstrapElements.Panel)
+        internal Panel(ViewContext viewContext, IHtmlString headerHtml = null, bool showHeader = false, Colors color = Colors.Default, IHtmlString footerHtml = null, bool showFooter = false)
+            : base(viewContext, Tags.Div, BootstrapElements.Panel)
         {
             AddCssClass("panel-" + color.DisplayName());
 
@@ -38,10 +38,10 @@ namespace BootstrapExtensionsMVC.Models
 
         void IDisposable.Dispose()
         {
-            helper.ViewContext.Writer.Write(bodyTB.ToString(TagRenderMode.EndTag));
+            viewContext.Writer.Write(bodyTB.ToString(TagRenderMode.EndTag));
 
             if (footer.Value == true)
-                helper.ViewContext.Writer.Write("<div class=\"{0}-footer\">{1}</div>", BootstrapElements.Panel.DisplayName(), footer.Key);
+                viewContext.Writer.Write("<div class=\"{0}-footer\">{1}</div>", BootstrapElements.Panel.DisplayName(), footer.Key);
 
             base.Dispose();
         }
