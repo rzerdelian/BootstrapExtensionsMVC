@@ -1,9 +1,95 @@
 ﻿@model object
 
-<div class="form-group @(Html.ValidationErrorFor(m => m, " has-error"))">
-    @Html.LabelFor(m => m, new { @class = "control-label col-md-3" })
-    <div class="col-md-9">
-        @Html.TextBoxFor(m => m, new { @class = "form-control", @type="email" })
-        @Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" })
-    </div>
+@{
+    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
+}
+
+<div class="form-group @templateHelper.FormGroupCssClass @(Html.ValidationErrorFor(m => m, " has-error"))">
+
+    @{
+        if (string.IsNullOrEmpty(templateHelper.LabelCssClass))
+        {
+            @Html.Raw("<div class=\"col-md-12\">");
+        @Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass });
+        }
+        else
+        {
+            @Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass });
+        @Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + "\">");
+        }
+
+        @Html.TextBoxFor(m => m, new { @class = "form-control", @type="email" });
+        @Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" });
+
+        @Html.Raw("</div>");
+    }
 </div>
+
+@*
+    //  additional ViewData options
+    //  formGroupSize: [ FormGroupSizes ]
+    //  formGroupLayout: [ enum FormGroupLayouts ]          XXXXXXXXXXX
+    //  labelWidth: [0-11]
+
+*@
+
+@*@{
+
+    FormGroupSizes? formGroupSize = ViewBag.formGroupSize;
+    //var formGroupLayout = ViewBag.formGroupLayout;
+    int? labelWidth = ViewBag.labelWidth;
+
+    string fgClass = "";
+    if (formGroupSize.HasValue)
+    {
+        //fgClass = ((FormGroupSizes)formGroupSize).DisplayName();
+        fgClass = formGroupSize.Value.DisplayName();
+    }
+
+    string labelClass = "col-md-4";
+    string fieldClass = "col-md-8";
+
+    if (labelWidth.HasValue)
+    {
+        if (labelWidth.Value == 0)
+        {
+            labelClass = "";
+            fieldClass = "";
+        }
+        else
+        {
+            labelClass = "col-md-" + labelWidth.Value;
+            fieldClass = "col-md-" + (12 - labelWidth.Value);
+        }
+
+    }
+
+}
+
+
+<div class="form-group @fgClass @(Html.ValidationErrorFor(m => m, " has-error"))">
+    
+
+    @{
+        if (string.IsNullOrEmpty(fieldClass))
+        {
+            <div class="col-md-12">
+                @Html.LabelFor(m => m, new { @class = "control-label " + labelClass })
+                @Html.TextBoxFor(m => m, new { @class = "form-control", @type = "email" })
+                @Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" })
+            </div>
+        }
+        else
+        {
+            @Html.LabelFor(m => m, new { @class = "control-label " + labelClass })
+            <div class="@fieldClass">
+                @Html.TextBoxFor(m => m, new { @class = "form-control", @type = "email" })
+                @Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" })
+            </div>
+        }
+    }
+
+
+
+
+</div>*@

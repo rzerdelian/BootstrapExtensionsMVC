@@ -27,6 +27,7 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
     using System.Web.UI;
     using System.Web.WebPages;
     using BootstrapExtensionsMVC;
+    using BootstrapExtensionsMVC.Models;
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/EditorTemplates/Time.cshtml")]
@@ -37,57 +38,158 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
         }
         public override void Execute()
         {
-WriteLiteral("<div");
-
-WriteAttribute("class", Tuple.Create(" class=\"", 24), Tuple.Create("\"", 91)
-, Tuple.Create(Tuple.Create("", 32), Tuple.Create("form-group", 32), true)
             
-            #line 3 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
-, Tuple.Create(Tuple.Create(" ", 42), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            #line 3 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+  
+    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
+
             
             #line default
             #line hidden
-, 43), false)
+WriteLiteral("\r\n\r\n<div");
+
+WriteAttribute("class", Tuple.Create(" class=\"", 159), Tuple.Create("\"", 260)
+, Tuple.Create(Tuple.Create("", 167), Tuple.Create("form-group", 167), true)
+            
+            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+, Tuple.Create(Tuple.Create(" ", 177), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
+            
+            #line default
+            #line hidden
+, 178), false)
+            
+            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+, Tuple.Create(Tuple.Create(" ", 211), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            
+            #line default
+            #line hidden
+, 212), false)
 );
 
-WriteLiteral(">\r\n");
-
-WriteLiteral("    ");
+WriteLiteral(">\r\n\r\n");
 
             
-            #line 4 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
-Write(Html.LabelFor(m => m, new { @class = "control-label col-md-3" }));
+            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+    
+            
+            #line default
+            #line hidden
+            
+            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+      
+        if (string.IsNullOrEmpty(templateHelper.LabelCssClass))
+        {
+            
+            
+            #line default
+            #line hidden
+            
+            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+       Write(Html.Raw("<div class=\"col-md-12\">"));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n    <div");
-
-WriteLiteral(" class=\"col-md-9\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("        ");
-
             
-            #line 6 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
-   Write(Html.TextBoxFor(m => m, new { @class = "form-control timepicker" }));
+            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+                                                  ;
+        
+            
+            #line default
+            #line hidden
+            
+            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+   Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n");
-
-WriteLiteral("        ");
+            
+            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+                                                                                                ;
+        }
+        else
+        {
+            
+            
+            #line default
+            #line hidden
+            
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+       Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
 
             
-            #line 7 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+            #line default
+            #line hidden
+            
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+                                                                                                    ;
+        
+            
+            #line default
+            #line hidden
+            
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+   Write(Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + "\">"));
+
+            
+            #line default
+            #line hidden
+            
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+                                                                          ;
+        }
+
+        
+            
+            #line default
+            #line hidden
+            
+            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+   Write(Html.TextBoxFor(m => m, new { @class = "form-control datetimepicker", data_date_format = "h:mm A", data_date_show_clear = "true" }));
+
+            
+            #line default
+            #line hidden
+            
+            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+                                                                                                                                            ;
+        
+            
+            #line default
+            #line hidden
+            
+            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
    Write(Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n    </div>\r\n</div>\r\n");
+            
+            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+                                                                                ;
+
+        
+            
+            #line default
+            #line hidden
+            
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+   Write(Html.Raw("</div>"));
+
+            
+            #line default
+            #line hidden
+            
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Time.cshtml"
+                           ;
+    
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n</div>\r\n\r\n");
+
+WriteLiteral("\r\n");
 
         }
     }

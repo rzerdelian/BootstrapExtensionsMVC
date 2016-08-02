@@ -10,13 +10,15 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/jqueryval")
 
+    @*@Styles.Render("~/bundles/css")*@
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="~/Content/bs-default.css" rel="stylesheet" />
+    <link href="~/Content/bs-index2.css" rel="stylesheet" />
 
     <style type="text/css">
         body {
@@ -28,6 +30,7 @@
 
     @Html.Partial("_bootstrapElements", Model)
 
+
+
 </body>
 </html>
-

@@ -58,3 +58,4 @@ C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\b
 C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\bin\System.Web.Mvc.xml
 C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\obj\Debug\BootstrapExtensionsMVC.dll
 C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\obj\Debug\BootstrapExtensionsMVC.pdb
+C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\obj\Debug\BootstrapExtensionsMVC.csprojResolveAssemblyReference.cache

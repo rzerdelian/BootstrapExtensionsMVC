@@ -27,6 +27,7 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
     using System.Web.UI;
     using System.Web.WebPages;
     using BootstrapExtensionsMVC;
+    using BootstrapExtensionsMVC.Models;
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/EditorTemplates/Decimal.cshtml")]
@@ -37,57 +38,158 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
         }
         public override void Execute()
         {
-WriteLiteral("<div");
-
-WriteAttribute("class", Tuple.Create(" class=\"", 23), Tuple.Create("\"", 90)
-, Tuple.Create(Tuple.Create("", 31), Tuple.Create("form-group", 31), true)
             
-            #line 3 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
-, Tuple.Create(Tuple.Create(" ", 41), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            #line 3 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+  
+    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
+
             
             #line default
             #line hidden
-, 42), false)
+WriteLiteral("\r\n\r\n<div");
+
+WriteAttribute("class", Tuple.Create(" class=\"", 158), Tuple.Create("\"", 259)
+, Tuple.Create(Tuple.Create("", 166), Tuple.Create("form-group", 166), true)
+            
+            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+, Tuple.Create(Tuple.Create(" ", 176), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
+            
+            #line default
+            #line hidden
+, 177), false)
+            
+            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+, Tuple.Create(Tuple.Create(" ", 210), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            
+            #line default
+            #line hidden
+, 211), false)
 );
 
-WriteLiteral(">\r\n");
-
-WriteLiteral("    ");
+WriteLiteral(">\r\n\r\n");
 
             
-            #line 4 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
-Write(Html.LabelFor(m => m, new { @class = "control-label col-md-3" }));
+            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+    
+            
+            #line default
+            #line hidden
+            
+            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+      
+        if (string.IsNullOrEmpty(templateHelper.LabelCssClass))
+        {
+            
+            
+            #line default
+            #line hidden
+            
+            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+       Write(Html.Raw("<div class=\"col-md-12\">"));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n    <div");
-
-WriteLiteral(" class=\"col-md-9\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("        ");
+            
+            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+                                                  ;
+        
+            
+            #line default
+            #line hidden
+            
+            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+   Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
 
             
-            #line 6 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+            #line default
+            #line hidden
+            
+            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+                                                                                                ;
+        }
+        else
+        {
+            
+            
+            #line default
+            #line hidden
+            
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+       Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
+
+            
+            #line default
+            #line hidden
+            
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+                                                                                                    ;
+        
+            
+            #line default
+            #line hidden
+            
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+   Write(Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + "\">"));
+
+            
+            #line default
+            #line hidden
+            
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+                                                                          ;
+        }
+
+        
+            
+            #line default
+            #line hidden
+            
+            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
    Write(Html.TextBoxFor(m => m, new { @class = "form-control" }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n");
-
-WriteLiteral("        ");
-
             
-            #line 7 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+                                                                 ;
+        
+            
+            #line default
+            #line hidden
+            
+            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
    Write(Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n    </div>\r\n</div>\r\n\r\n");
+            
+            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+                                                                                ;
+
+        
+            
+            #line default
+            #line hidden
+            
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+   Write(Html.Raw("</div>"));
+
+            
+            #line default
+            #line hidden
+            
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Decimal.cshtml"
+                           ;
+    
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n</div>\r\n\r\n");
+
+WriteLiteral("\r\n\r\n");
 
         }
     }

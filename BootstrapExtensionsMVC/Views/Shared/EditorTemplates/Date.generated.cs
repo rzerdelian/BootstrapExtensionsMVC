@@ -27,6 +27,7 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
     using System.Web.UI;
     using System.Web.WebPages;
     using BootstrapExtensionsMVC;
+    using BootstrapExtensionsMVC.Models;
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/EditorTemplates/Date.cshtml")]
@@ -37,59 +38,158 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
         }
         public override void Execute()
         {
-WriteLiteral("\r\n");
-
-WriteLiteral("<div");
-
-WriteAttribute("class", Tuple.Create(" class=\"", 26), Tuple.Create("\"", 93)
-, Tuple.Create(Tuple.Create("", 34), Tuple.Create("form-group", 34), true)
             
-            #line 4 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
-, Tuple.Create(Tuple.Create(" ", 44), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            #line 3 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+  
+    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
+
             
             #line default
             #line hidden
-, 45), false)
+WriteLiteral("\r\n\r\n<div");
+
+WriteAttribute("class", Tuple.Create(" class=\"", 159), Tuple.Create("\"", 260)
+, Tuple.Create(Tuple.Create("", 167), Tuple.Create("form-group", 167), true)
+            
+            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+, Tuple.Create(Tuple.Create(" ", 177), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
+            
+            #line default
+            #line hidden
+, 178), false)
+            
+            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+, Tuple.Create(Tuple.Create(" ", 211), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            
+            #line default
+            #line hidden
+, 212), false)
 );
 
-WriteLiteral(">\r\n");
-
-WriteLiteral("    ");
+WriteLiteral(">\r\n\r\n");
 
             
-            #line 5 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
-Write(Html.LabelFor(m => m, new { @class = "control-label col-md-3" }));
+            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+    
+            
+            #line default
+            #line hidden
+            
+            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+      
+        if (string.IsNullOrEmpty(templateHelper.LabelCssClass))
+        {
+            
+            
+            #line default
+            #line hidden
+            
+            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+       Write(Html.Raw("<div class=\"col-md-12\">"));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n    <div");
-
-WriteLiteral(" class=\"col-md-9\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("        ");
-
             
-            #line 7 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
-   Write(Html.TextBoxFor(m => m, new { @class = "form-control datepicker", data_date_format="MM/DD/YYYY", data_date_show_today_button="true", data_date_show_clear="true" }));
+            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+                                                  ;
+            
+            
+            #line default
+            #line hidden
+            
+            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+       Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n");
-
-WriteLiteral("        ");
+            
+            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+                                                                                                    ;
+        }
+        else
+        {
+            
+            
+            #line default
+            #line hidden
+            
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+       Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
 
             
-            #line 8 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+            #line default
+            #line hidden
+            
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+                                                                                                    ;
+            
+            
+            #line default
+            #line hidden
+            
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+       Write(Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + "\">"));
+
+            
+            #line default
+            #line hidden
+            
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+                                                                              ;
+        }
+
+        
+            
+            #line default
+            #line hidden
+            
+            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+   Write(Html.TextBoxFor(m => m, new { @class = "form-control datetimepicker", data_date_format = "MM/DD/YYYY", data_date_show_today_button = "true", data_date_show_clear = "true" }));
+
+            
+            #line default
+            #line hidden
+            
+            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+                                                                                                                                                                                      ;
+        
+            
+            #line default
+            #line hidden
+            
+            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
    Write(Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n    </div>\r\n</div>\r\n\r\n");
+            
+            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+                                                                                ;
+
+        
+            
+            #line default
+            #line hidden
+            
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+   Write(Html.Raw("</div>"));
+
+            
+            #line default
+            #line hidden
+            
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Date.cshtml"
+                           ;
+    
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n</div>\r\n\r\n");
+
+WriteLiteral("\r\n\r\n");
 
         }
     }

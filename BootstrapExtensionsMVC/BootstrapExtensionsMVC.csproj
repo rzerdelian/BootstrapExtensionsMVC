@@ -128,6 +128,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\BootstrapExtensions.cs" />
+    <Compile Include="Helpers\EditorTemplateHelper.cs" />
     <Compile Include="Helpers\Helpers.cs" />
     <Compile Include="Helpers\HtmlBootstrapHelper.cs" />
     <Compile Include="Helpers\RazorBasePage.cs" />
@@ -232,6 +233,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Url.cshtml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Shared\EditorTemplates\_generic.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_generic.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -308,6 +314,10 @@
     <Content Include="Views\Shared\EditorTemplates\Timespan.cshtml">
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Timespan.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\EditorTemplates\_generic.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_generic.generated.cs</LastGenOutput>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

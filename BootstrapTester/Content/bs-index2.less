@@ -1,0 +1,167 @@
+﻿
+// Core variables and mixins
+@import "bootstrap/variables.less";
+@import "bootstrap/mixins.less";
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+@navbar-height:                    50px;
+@navbar-margin-bottom:             @line-height-computed;
+@navbar-border-radius:             @border-radius-base;
+@navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
+@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+@navbar-collapse-max-height:       340px;
+
+@navbar-default-color:            #fff; // #777;
+@navbar-default-bg:                #336699; // #f8f8f8;
+@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+
+// Navbar links
+@navbar-default-link-color:               #fff; // #777;
+@navbar-default-link-hover-color:        gold; //  #333;
+@navbar-default-link-hover-bg:            darken(@navbar-default-bg, 10%); // transparent;
+@navbar-default-link-active-color:        gold; //#555;
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color:      lighten(@navbar-default-bg, 6.5%); // #ccc;
+@navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+@navbar-default-brand-color:               @navbar-default-link-color;
+@navbar-default-brand-hover-color:       @navbar-default-link-color; //  transparent; //darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-bg:            darken(@navbar-default-bg, 6.5%); // transparent;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           #ddd;
+@navbar-default-toggle-icon-bar-bg:        #888;
+@navbar-default-toggle-border-color:       #ddd;
+
+//=== Shared nav styles
+@nav-link-padding:                          10px 15px;
+@nav-link-hover-bg:                         @gray-lighter;
+
+@nav-disabled-link-color:                   @gray-light;
+@nav-disabled-link-hover-color:             @gray-light;
+
+// Reset and dependencies
+@import "bootstrap/normalize.less";
+@import "bootstrap/print.less";
+@import "bootstrap/glyphicons.less";
+
+// Core CSS
+@import "bootstrap/scaffolding.less";
+@import "bootstrap/type.less";
+@import "bootstrap/code.less";
+@import "bootstrap/grid.less";
+@import "bootstrap/tables.less";
+@import "bootstrap/forms.less";
+@import "bootstrap/buttons.less";
+
+// Components
+@import "bootstrap/component-animations.less";
+@import "bootstrap/dropdowns.less";
+@import "bootstrap/button-groups.less";
+@import "bootstrap/input-groups.less";
+@import "bootstrap/navs.less";
+@import "bootstrap/navbar.less";
+@import "bootstrap/breadcrumbs.less";
+@import "bootstrap/pagination.less";
+@import "bootstrap/pager.less";
+@import "bootstrap/labels.less";
+@import "bootstrap/badges.less";
+@import "bootstrap/jumbotron.less";
+@import "bootstrap/thumbnails.less";
+@import "bootstrap/alerts.less";
+@import "bootstrap/progress-bars.less";
+@import "bootstrap/media.less";
+@import "bootstrap/list-group.less";
+@import "bootstrap/panels.less";
+@import "bootstrap/responsive-embed.less";
+@import "bootstrap/wells.less";
+@import "bootstrap/close.less";
+
+// Components w/ JavaScript
+@import "bootstrap/modals.less";
+@import "bootstrap/tooltip.less";
+@import "bootstrap/popovers.less";
+@import "bootstrap/carousel.less";
+
+// Utility classes
+@import "bootstrap/utilities.less";
+@import "bootstrap/responsive-utilities.less";
+
+
+
+
+@import "_bootstrap-datetimepicker.less";
+@import "awesome-bootstrap-checkbox.less";
+
+.row {
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+
+div.dropdown {
+    display:inline-block;
+}
+
+.navbar-nav > li.active {
+    border-bottom: 3px solid @navbar-default-link-active-color;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*@import url(//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
+
+.checkbox-custom {
+
+    & > input[type="checkbox"] 
+        {
+            display:none;
+            & ~  label:before{
+                padding-right: 10px;
+                padding-bottom:4px;
+                font-size: 20px;
+                font-family: 'FontAwesome';
+                content: "\f096";
+            }
+
+            &:checked ~ label:before {
+                    content:"\f046";
+                }
+        }
+
+    & > label {
+
+        &:before {
+            padding-right: 10px;
+            padding-bottom:4px;
+            font-size: 20px;
+            font-family: 'FontAwesome';
+            content: "\f096";
+
+            & > input[type="checkbox"]:checked
+            {
+                display:none;
+                content:"f\046";
+            }
+        }
+
+        & > input[type="checkbox"]
+        {
+            display:none;
+
+            &:checked:before
+            {
+                display:none;
+                content:"f\046";
+            }
+        }
+
+        
+    }
+}*/

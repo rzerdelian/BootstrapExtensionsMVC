@@ -117,6 +117,12 @@
     <Content Include="Content\bs-default.min.css">
       <DependentUpon>bs-default.css</DependentUpon>
     </Content>
+    <Content Include="Content\bs-index2.css">
+      <DependentUpon>bs-index2.less</DependentUpon>
+    </Content>
+    <Content Include="Content\bs-index2.min.css">
+      <DependentUpon>bs-index2.css</DependentUpon>
+    </Content>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -209,6 +215,10 @@
     <Content Include="Content\_bootstrap-datetimepicker.less" />
     <Content Include="Content\awesome-bootstrap-checkbox.scss" />
     <Content Include="Content\awesome-bootstrap-checkbox.less" />
+    <Content Include="Content\bs-index2.less" />
+    <Content Include="Content\bs-index2.css.map">
+      <DependentUpon>bs-index2.css</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
@@ -235,6 +245,8 @@
     <Content Include="Views\Shared\ZZZ_EditorTemplates\Password.cshtml" />
     <Content Include="Views\Shared\ZZZ_EditorTemplates\Boolean.cshtml" />
     <Content Include="Views\Shared\ZZZ_EditorTemplates\CustomString.cshtml" />
+    <Content Include="Views\Shared\_bootstrapElements.cshtml" />
+    <Content Include="Views\Default\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />

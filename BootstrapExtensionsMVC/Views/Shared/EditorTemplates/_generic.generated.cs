@@ -30,16 +30,16 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
     using BootstrapExtensionsMVC.Models;
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
-    [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/EditorTemplates/MultilineText.cshtml")]
-    public partial class MultilineText_ : System.Web.Mvc.WebViewPage<object>
+    [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/EditorTemplates/_generic.cshtml")]
+    public partial class _generic_ : System.Web.Mvc.WebViewPage<object>
     {
-        public MultilineText_()
+        public _generic_()
         {
         }
         public override void Execute()
         {
             
-            #line 3 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 3 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
   
     var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
 
@@ -51,14 +51,14 @@ WriteLiteral("\r\n\r\n<div");
 WriteAttribute("class", Tuple.Create(" class=\"", 156), Tuple.Create("\"", 257)
 , Tuple.Create(Tuple.Create("", 164), Tuple.Create("form-group", 164), true)
             
-            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
 , Tuple.Create(Tuple.Create(" ", 174), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
             
             #line default
             #line hidden
 , 175), false)
             
-            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
 , Tuple.Create(Tuple.Create(" ", 208), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
             
             #line default
@@ -69,13 +69,13 @@ WriteAttribute("class", Tuple.Create(" class=\"", 156), Tuple.Create("\"", 257)
 WriteLiteral(">\r\n\r\n");
 
             
-            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
     
             
             #line default
             #line hidden
             
-            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
       
         if (string.IsNullOrEmpty(templateHelper.LabelCssClass))
         {
@@ -84,28 +84,28 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
             
-            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
        Write(Html.Raw("<div class=\"col-md-12\">"));
 
             
             #line default
             #line hidden
             
-            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
                                                   ;
         
             
             #line default
             #line hidden
             
-            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
    Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
 
             
             #line default
             #line hidden
             
-            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
                                                                                                 ;
         }
         else
@@ -115,28 +115,28 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
             
-            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
        Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
 
             
             #line default
             #line hidden
             
-            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
                                                                                                     ;
         
             
             #line default
             #line hidden
             
-            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
    Write(Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + "\">"));
 
             
             #line default
             #line hidden
             
-            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
                                                                           ;
         }
 
@@ -145,28 +145,28 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
             
-            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
-   Write(Html.TextAreaFor(m => m, new { @class = "form-control" }));
+            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
+   Write(Html.TextBoxFor(m => m, new { @class = "form-control" }));
 
             
             #line default
             #line hidden
             
-            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
-                                                                  
+            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
+                                                                 ;
         
             
             #line default
             #line hidden
             
-            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
    Write(Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" }));
 
             
             #line default
             #line hidden
             
-            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
                                                                                 ;
 
         
@@ -174,22 +174,20 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
             
-            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
    Write(Html.Raw("</div>"));
 
             
             #line default
             #line hidden
             
-            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\MultilineText.cshtml"
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\_generic.cshtml"
                            ;
     
             
             #line default
             #line hidden
-WriteLiteral("\r\n</div>\r\n\r\n");
-
-WriteLiteral("\r\n");
+WriteLiteral("\r\n</div>");
 
         }
     }

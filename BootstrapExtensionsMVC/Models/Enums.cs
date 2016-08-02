@@ -310,4 +310,27 @@ namespace BootstrapExtensionsMVC.Models
         //ButtonGroup
     }
 
+    public enum FormGroupSizes
+    {
+        [Display(Name="form-group-sm", Order=2)]
+        Small,
+
+        [Display(Name="", Order=1)]
+        Default,
+
+        [Display(Name="form-group-lg", Order=3)]
+        Large,
+    }
+
+    //public enum FormGroupLayouts
+    //{
+
+    //    SingleColumn, 
+
+    //    SingleLine_1_11,
+    //    SingleLine_2_10,
+    //    SingleLine_3_9,
+    //    SingleLine_4_8,
+
+    //}
 }

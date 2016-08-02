@@ -1,6 +1,40 @@
 ﻿@model Boolean
 
 @{
+    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
+    var checkboxStyle = ViewBag.checkboxStyle;
+}
+
+<div class="form-group @templateHelper.FormGroupCssClass @(Html.ValidationErrorFor(m => m, " has-error"))">
+
+    @{
+        if (string.IsNullOrEmpty(templateHelper.LabelCssClass))
+        {
+            @Html.Raw("<div class=\"col-md-12\">")    ;
+            @Html.Raw("<div class=\"checkbox " + checkboxStyle + "\">");
+                
+                @*@Html.Raw("&nbsp; &nbsp;")*@
+                @Html.CheckBoxFor(m => m) ;
+                                          @Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass });
+            @Html.Raw("</div>");
+        }
+        else
+        {
+         @Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }) 
+         @Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + " checkbox " + checkboxStyle + " \">") 
+         @Html.Raw("&nbsp; &nbsp;") 
+         @Html.CheckBoxFor(m => m) 
+            <label></label>
+        }
+
+
+        @Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" });
+
+        @Html.Raw("</div>");
+    }
+</div>
+
+@*@{
     
     var checkboxStyle = ViewBag.checkboxStyle;
     
@@ -15,4 +49,4 @@
         <label></label>
         @Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" })
     </div>
-</div>
+</div>*@

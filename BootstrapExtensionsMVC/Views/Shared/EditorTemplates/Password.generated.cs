@@ -27,6 +27,7 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
     using System.Web.UI;
     using System.Web.WebPages;
     using BootstrapExtensionsMVC;
+    using BootstrapExtensionsMVC.Models;
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/EditorTemplates/Password.cshtml")]
@@ -37,57 +38,158 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
         }
         public override void Execute()
         {
-WriteLiteral("<div");
-
-WriteAttribute("class", Tuple.Create(" class=\"", 21), Tuple.Create("\"", 88)
-, Tuple.Create(Tuple.Create("", 29), Tuple.Create("form-group", 29), true)
             
-            #line 3 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
-, Tuple.Create(Tuple.Create(" ", 39), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            #line 3 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+  
+    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
+
             
             #line default
             #line hidden
-, 40), false)
+WriteLiteral("\r\n\r\n<div");
+
+WriteAttribute("class", Tuple.Create(" class=\"", 156), Tuple.Create("\"", 257)
+, Tuple.Create(Tuple.Create("", 164), Tuple.Create("form-group", 164), true)
+            
+            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+, Tuple.Create(Tuple.Create(" ", 174), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
+            
+            #line default
+            #line hidden
+, 175), false)
+            
+            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+, Tuple.Create(Tuple.Create(" ", 208), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            
+            #line default
+            #line hidden
+, 209), false)
 );
 
-WriteLiteral(">\r\n");
-
-WriteLiteral("    ");
+WriteLiteral(">\r\n\r\n");
 
             
-            #line 4 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
-Write(Html.LabelFor(m => m, new { @class = "control-label col-md-3" }));
+            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+    
+            
+            #line default
+            #line hidden
+            
+            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+      
+        if (string.IsNullOrEmpty(templateHelper.LabelCssClass))
+        {
+            
+            
+            #line default
+            #line hidden
+            
+            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+       Write(Html.Raw("<div class=\"col-md-12\">"));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n    <div");
-
-WriteLiteral(" class=\"col-md-9\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("        ");
+            
+            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+                                                  ;
+        
+            
+            #line default
+            #line hidden
+            
+            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+   Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
 
             
-            #line 6 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+            #line default
+            #line hidden
+            
+            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+                                                                                                ;
+        }
+        else
+        {
+            
+            
+            #line default
+            #line hidden
+            
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+       Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
+
+            
+            #line default
+            #line hidden
+            
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+                                                                                                    ;
+        
+            
+            #line default
+            #line hidden
+            
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+   Write(Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + "\">"));
+
+            
+            #line default
+            #line hidden
+            
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+                                                                          ;
+        }
+
+        
+            
+            #line default
+            #line hidden
+            
+            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
    Write(Html.PasswordFor(m => m, new { @class = "form-control" }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n");
-
-WriteLiteral("        ");
-
             
-            #line 7 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+                                                                  
+        
+            
+            #line default
+            #line hidden
+            
+            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
    Write(Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n    </div>\r\n</div>\r\n\r\n");
+            
+            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+                                                                                ;
+
+        
+            
+            #line default
+            #line hidden
+            
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+   Write(Html.Raw("</div>"));
+
+            
+            #line default
+            #line hidden
+            
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Password.cshtml"
+                           ;
+    
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n</div>\r\n\r\n");
+
+WriteLiteral("\r\n\r\n");
 
         }
     }

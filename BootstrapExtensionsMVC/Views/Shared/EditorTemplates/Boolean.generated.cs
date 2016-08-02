@@ -27,6 +27,7 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
     using System.Web.UI;
     using System.Web.WebPages;
     using BootstrapExtensionsMVC;
+    using BootstrapExtensionsMVC.Models;
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/EditorTemplates/Boolean.cshtml")]
@@ -38,77 +39,231 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
         public override void Execute()
         {
             
-            #line 3 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+            #line 3 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
   
-    
+    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
     var checkboxStyle = ViewBag.checkboxStyle;
-    
-    
 
             
             #line default
             #line hidden
 WriteLiteral("\r\n\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 97), Tuple.Create("\"", 164)
-, Tuple.Create(Tuple.Create("", 105), Tuple.Create("form-group", 105), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 205), Tuple.Create("\"", 306)
+, Tuple.Create(Tuple.Create("", 213), Tuple.Create("form-group", 213), true)
             
-            #line 10 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
-, Tuple.Create(Tuple.Create(" ", 115), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            #line 8 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+, Tuple.Create(Tuple.Create(" ", 223), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
             
             #line default
             #line hidden
-, 116), false)
+, 224), false)
+            
+            #line 8 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+, Tuple.Create(Tuple.Create(" ", 257), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            
+            #line default
+            #line hidden
+, 258), false)
 );
 
-WriteLiteral(">\r\n");
-
-WriteLiteral("    ");
+WriteLiteral(">\r\n\r\n");
 
             
-            #line 11 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
-Write(Html.LabelFor(m => m, new { @class = "control-label col-md-3" }));
+            #line 10 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+    
+            
+            #line default
+            #line hidden
+            
+            #line 10 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+      
+        if (string.IsNullOrEmpty(templateHelper.LabelCssClass))
+        {
+            
+            
+            #line default
+            #line hidden
+            
+            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+       Write(Html.Raw("<div class=\"col-md-12\">"));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n    <div");
-
-WriteAttribute("class", Tuple.Create(" class=\"", 247), Tuple.Create("\"", 287)
-, Tuple.Create(Tuple.Create("", 255), Tuple.Create("col-md-9", 255), true)
-, Tuple.Create(Tuple.Create(" ", 263), Tuple.Create("checkbox", 264), true)
             
-            #line 12 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
-, Tuple.Create(Tuple.Create(" ", 272), Tuple.Create<System.Object, System.Int32>(checkboxStyle
+            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                                                      ;
+            
             
             #line default
             #line hidden
-, 273), false)
-);
-
-WriteLiteral(">\r\n        &nbsp;&nbsp;\r\n");
-
-WriteLiteral("        ");
-
             
-            #line 14 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
-   Write(Html.CheckBoxFor(m=> m));
+            #line 14 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+       Write(Html.Raw("<div class=\"checkbox " + checkboxStyle + "\">"));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n        <label></label>\r\n");
-
-WriteLiteral("        ");
+            
+            #line 14 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                                                                       ;
+                
+                
+            
+            #line default
+            #line hidden
+            
+            #line 16 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                                              
+                
+            
+            #line default
+            #line hidden
+            
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+           Write(Html.CheckBoxFor(m => m));
 
             
-            #line 16 "C:\Users\rich\My Dev Space\trunk\MvcMicroSite2\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+            #line default
+            #line hidden
+            
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                                          ;
+                                          
+            
+            #line default
+            #line hidden
+            
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                                     Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
+
+            
+            #line default
+            #line hidden
+            
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                                                                                                                                  ;
+            
+            
+            #line default
+            #line hidden
+            
+            #line 19 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+       Write(Html.Raw("</div>"));
+
+            
+            #line default
+            #line hidden
+            
+            #line 19 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                               ;
+        }
+        else
+        {
+         
+            
+            #line default
+            #line hidden
+            
+            #line 23 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+    Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
+
+            
+            #line default
+            #line hidden
+            
+            #line 23 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                                                                                                  
+         
+            
+            #line default
+            #line hidden
+            
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+    Write(Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + " checkbox " + checkboxStyle + " \">"));
+
+            
+            #line default
+            #line hidden
+            
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                                                                                                            
+         
+            
+            #line default
+            #line hidden
+            
+            #line 25 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+    Write(Html.Raw("&nbsp; &nbsp;"));
+
+            
+            #line default
+            #line hidden
+            
+            #line 25 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                                    
+         
+            
+            #line default
+            #line hidden
+            
+            #line 26 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+    Write(Html.CheckBoxFor(m => m));
+
+            
+            #line default
+            #line hidden
+            
+            #line 26 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                                   
+
+            
+            #line default
+            #line hidden
+WriteLiteral("            <label></label>\r\n");
+
+            
+            #line 28 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+        }
+
+
+        
+            
+            #line default
+            #line hidden
+            
+            #line 31 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
    Write(Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n    </div>\r\n</div>\r\n");
+            
+            #line 31 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                                                                                ;
+
+        
+            
+            #line default
+            #line hidden
+            
+            #line 33 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+   Write(Html.Raw("</div>"));
+
+            
+            #line default
+            #line hidden
+            
+            #line 33 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Boolean.cshtml"
+                           ;
+    
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n</div>\r\n\r\n");
+
+WriteLiteral("\r\n");
 
         }
     }

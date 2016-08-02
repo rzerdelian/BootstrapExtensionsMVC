@@ -1,9 +1,34 @@
 ﻿@model DateTime?
 
-<div class="form-group @(Html.ValidationErrorFor(m => m, " has-error"))">
+@{
+    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
+}
+
+<div class="form-group @templateHelper.FormGroupCssClass @(Html.ValidationErrorFor(m => m, " has-error"))">
+
+    @{
+        if (string.IsNullOrEmpty(templateHelper.LabelCssClass))
+        {
+            @Html.Raw("<div class=\"col-md-12\">");
+        @Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass });
+        }
+        else
+        {
+            @Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass });
+        @Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + "\">");
+        }
+
+        @Html.TextBoxFor(m => m, new { @class = "form-control datetimepicker", data_date_format = "h:mm A", data_date_show_clear = "true" });
+        @Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" });
+
+        @Html.Raw("</div>");
+    }
+</div>
+
+@*<div class="form-group @(Html.ValidationErrorFor(m => m, " has-error"))">
     @Html.LabelFor(m => m, new { @class = "control-label col-md-3" })
     <div class="col-md-9">
         @Html.TextBoxFor(m => m, new { @class = "form-control timepicker" })
         @Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" })
     </div>
-</div>
+</div>*@

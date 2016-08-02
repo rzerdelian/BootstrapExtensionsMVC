@@ -13,5 +13,10 @@ namespace BootstrapTester.Controllers
         {
             return View(new Models.BootstrapSampleObject());
         }
+
+        public ActionResult Index2()
+        {
+            return View(new Models.BootstrapSampleObject());
+        }
     }
 }
