@@ -41,41 +41,46 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
             
             #line 3 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
   
-    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
+    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag);
+
+    //datetimepicker", data_date_format = "MM/DD/YYYY", data_date_show_today_button = "true", data_date_show_clear = "true" });
+    templateHelper.InputHtmlAttributes["class"] += " datetimepicker";
+    templateHelper.InputHtmlAttributes["data-date-format"] = "h:mm A";
+    templateHelper.InputHtmlAttributes["data-date-show-clear"] = "true";
 
             
             #line default
             #line hidden
 WriteLiteral("\r\n\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 159), Tuple.Create("\"", 260)
-, Tuple.Create(Tuple.Create("", 167), Tuple.Create("form-group", 167), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 473), Tuple.Create("\"", 574)
+, Tuple.Create(Tuple.Create("", 481), Tuple.Create("form-group", 481), true)
             
-            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
-, Tuple.Create(Tuple.Create(" ", 177), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
-            
-            #line default
-            #line hidden
-, 178), false)
-            
-            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
-, Tuple.Create(Tuple.Create(" ", 211), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+, Tuple.Create(Tuple.Create(" ", 491), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
             
             #line default
             #line hidden
-, 212), false)
+, 492), false)
+            
+            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+, Tuple.Create(Tuple.Create(" ", 525), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            
+            #line default
+            #line hidden
+, 526), false)
 );
 
 WriteLiteral(">\r\n\r\n");
 
             
-            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+            #line 14 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
     
             
             #line default
             #line hidden
             
-            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+            #line 14 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
       
         if (string.IsNullOrEmpty(templateHelper.LabelCssClass))
         {
@@ -84,29 +89,29 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
             
-            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
        Write(Html.Raw("<div class=\"col-md-12\">"));
 
             
             #line default
             #line hidden
             
-            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
                                                   ;
         
             
             #line default
             #line hidden
             
-            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
-   Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+   Write(Html.LabelFor(m => m, templateHelper.LabelHtmlAttributes));
 
             
             #line default
             #line hidden
             
-            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
-                                                                                                ;
+            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+                                                                  ;
         }
         else
         {
@@ -115,28 +120,28 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
             
-            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
-       Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
+            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+       Write(Html.LabelFor(m => m, templateHelper.LabelHtmlAttributes));
 
             
             #line default
             #line hidden
             
-            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
-                                                                                                    ;
+            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+                                                                      ;
         
             
             #line default
             #line hidden
             
-            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+            #line 23 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
    Write(Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + "\">"));
 
             
             #line default
             #line hidden
             
-            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+            #line 23 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
                                                                           ;
         }
 
@@ -145,28 +150,28 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
             
-            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
-   Write(Html.TextBoxFor(m => m, new { @class = "form-control datetimepicker", data_date_format = "h:mm A", data_date_show_clear = "true" }));
+            #line 26 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+   Write(Html.TextBoxFor(m => m, templateHelper.InputHtmlAttributes));
 
             
             #line default
             #line hidden
             
-            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
-                                                                                                                                            ;
+            #line 26 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+                                                                    ;
         
             
             #line default
             #line hidden
             
-            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+            #line 27 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
    Write(Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" }));
 
             
             #line default
             #line hidden
             
-            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+            #line 27 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
                                                                                 ;
 
         
@@ -174,22 +179,20 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
             
-            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+            #line 29 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
    Write(Html.Raw("</div>"));
 
             
             #line default
             #line hidden
             
-            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
+            #line 29 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Timespan.cshtml"
                            ;
     
             
             #line default
             #line hidden
-WriteLiteral("\r\n</div>\r\n\r\n");
-
-WriteLiteral("\r\n");
+WriteLiteral("\r\n</div>\r\n");
 
         }
     }

@@ -41,41 +41,43 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
             
             #line 3 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
   
-    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
+    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag);
+
+    templateHelper.InputHtmlAttributes["type"] = "tel";
 
             
             #line default
             #line hidden
 WriteLiteral("\r\n\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 156), Tuple.Create("\"", 257)
-, Tuple.Create(Tuple.Create("", 164), Tuple.Create("form-group", 164), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 181), Tuple.Create("\"", 282)
+, Tuple.Create(Tuple.Create("", 189), Tuple.Create("form-group", 189), true)
             
-            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
-, Tuple.Create(Tuple.Create(" ", 174), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
-            
-            #line default
-            #line hidden
-, 175), false)
-            
-            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
-, Tuple.Create(Tuple.Create(" ", 208), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+, Tuple.Create(Tuple.Create(" ", 199), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
             
             #line default
             #line hidden
-, 209), false)
+, 200), false)
+            
+            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+, Tuple.Create(Tuple.Create(" ", 233), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
+            
+            #line default
+            #line hidden
+, 234), false)
 );
 
 WriteLiteral(">\r\n\r\n");
 
             
-            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+            #line 11 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
     
             
             #line default
             #line hidden
             
-            #line 9 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+            #line 11 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
       
         if (string.IsNullOrEmpty(templateHelper.LabelCssClass))
         {
@@ -84,29 +86,29 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
             
-            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+            #line 14 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
        Write(Html.Raw("<div class=\"col-md-12\">"));
 
             
             #line default
             #line hidden
             
-            #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+            #line 14 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
                                                   ;
         
             
             #line default
             #line hidden
             
-            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
-   Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
+            #line 15 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+   Write(Html.LabelFor(m => m, templateHelper.LabelHtmlAttributes));
 
             
             #line default
             #line hidden
             
-            #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
-                                                                                                ;
+            #line 15 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+                                                                  ;
         }
         else
         {
@@ -115,28 +117,28 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
             
-            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
-       Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
+            #line 19 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+       Write(Html.LabelFor(m => m, templateHelper.LabelHtmlAttributes));
 
             
             #line default
             #line hidden
             
-            #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
-                                                                                                    ;
+            #line 19 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+                                                                      ;
         
             
             #line default
             #line hidden
             
-            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+            #line 20 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
    Write(Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + "\">"));
 
             
             #line default
             #line hidden
             
-            #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+            #line 20 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
                                                                           ;
         }
 
@@ -145,28 +147,28 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
             
-            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
-   Write(Html.TextBoxFor(m => m, new { @class = "form-control", @type="tel" }));
+            #line 23 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+   Write(Html.TextBoxFor(m => m, templateHelper.InputHtmlAttributes));
 
             
             #line default
             #line hidden
             
-            #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
-                                                                              ;
+            #line 23 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+                                                                    ;
         
             
             #line default
             #line hidden
             
-            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
    Write(Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" }));
 
             
             #line default
             #line hidden
             
-            #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
                                                                                 ;
 
         
@@ -174,22 +176,20 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
             
-            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+            #line 26 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
    Write(Html.Raw("</div>"));
 
             
             #line default
             #line hidden
             
-            #line 24 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
+            #line 26 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\PhoneNumber.cshtml"
                            ;
     
             
             #line default
             #line hidden
-WriteLiteral("\r\n</div>\r\n\r\n");
-
-WriteLiteral("\r\n");
+WriteLiteral("\r\n</div>");
 
         }
     }

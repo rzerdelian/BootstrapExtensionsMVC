@@ -16,6 +16,34 @@
 
         <br /><br /><br />
 
+
+        <div class="dropdown">
+            <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
+                Dropdown <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                <li><a href="#">Some action</a></li>
+                <li><a href="#">Some other action</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Hover me for more options</a>
+                    <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">Second level</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="#">Even More..</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">3rd level</a></li>
+                                <li><a href="#">3rd level</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Second level</a></li>
+                        <li><a href="#">Second level</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
         <div class="row">
             <div class="col-md-10">
 
@@ -250,7 +278,10 @@
                             <div class="form-horizontal">
                                 @using (Html.BeginForm())
                                 {
-                                    @Html.EditorFor(m => m.Name)
+                                    @Html.EditorFor(m => m.Name, new
+                                    {
+                                        inputHtmlAttributes = new { style="max-width:50px;", @class="bg-primary" }
+                                    })
                                     @Html.EditorFor(m => m.Email)
                                     @Html.EditorFor(m => m.CreateDate)
                                     @Html.EditorFor(m => m.Date)
@@ -258,7 +289,7 @@
                                     @Html.EditorFor(m => m.Id)
                                     @Html.EditorFor(m => m.BooleanOption)
                                     @Html.EditorFor(m => m.BooleanOption, "boolean", "bool2", new { checkboxStyle = "checkbox-success" })
-                                    
+
                                     @Html.EditorFor(m => m.ColorsEnum)
                                     @Html.EditorFor(m => m.Currency)
                                     @Html.EditorFor(m => m.Decimal)
@@ -278,7 +309,7 @@
                             <div class="form-horizontal">
                                 @using (Html.BeginForm())
                                 {
-                                    @Html.EditorFor(m => m.Name, new { labelWidth=0 })
+                                    @Html.EditorFor(m => m.Name, new { labelWidth = 0 })
                                     @Html.EditorFor(m => m.Email, new { labelWidth = 0 })
                                     @Html.EditorFor(m => m.CreateDate, new { labelWidth = 0 })
                                     @Html.EditorFor(m => m.Date, new { labelWidth = 0 })
@@ -335,7 +366,7 @@
                             <div class="form-horizontal">
                                 @using (Html.BeginForm())
                                 {
-                                    @Html.EditorFor(m => m.Name, new { formGroupSize = FormGroupSizes.Large, labelWidth=0 })
+                                    @Html.EditorFor(m => m.Name, new { formGroupSize = FormGroupSizes.Large, labelWidth = 0 })
                                     @Html.EditorFor(m => m.Email, new { formGroupSize = FormGroupSizes.Large, labelWidth = 0 })
                                     @Html.EditorFor(m => m.CreateDate, new { formGroupSize = FormGroupSizes.Large, labelWidth = 0 })
                                     @Html.EditorFor(m => m.Date, new { formGroupSize = FormGroupSizes.Large })
@@ -356,7 +387,7 @@
                             </div>
                         }
                     }
-}
+                }
 
 
                 <div class="row" id="Navs">
@@ -433,25 +464,25 @@
 
 
 <script type="text/javascript">
-        $(document).ready(function () {
+    $(document).ready(function () {
 
-            $('body').scrollspy({ target: '.nav.affix' })
+        $('body').scrollspy({ target: '.nav.affix' })
 
-            $(".datetimepicker").datetimepicker();
-            //$(".datepicker").datetimepicker({ format: "MM/DD/YYYY" });
-            //$(".datepicker").datetimepicker();
-            //$(".timepicker").datetimepicker({ format: "h:mm A" });
+        $(".datetimepicker").datetimepicker();
+        //$(".datepicker").datetimepicker({ format: "MM/DD/YYYY" });
+        //$(".datepicker").datetimepicker();
+        //$(".timepicker").datetimepicker({ format: "h:mm A" });
 
-            $('[data-toggle="popover"]').popover();
+        $('[data-toggle="popover"]').popover();
 
-            //set active item in nav
-            $('li.active').removeClass('active');
-            $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
+        //set active item in nav
+        $('li.active').removeClass('active');
+        $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
 
-            $(".nav a").on("click", function () {
-                $(".nav").find(".active").removeClass("active");
-                $(this).parent().addClass("active");
-            });
+        $(".nav a").on("click", function () {
+            $(".nav").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
         });
+    });
 
 </script>

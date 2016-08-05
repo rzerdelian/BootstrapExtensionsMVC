@@ -43,29 +43,29 @@ WriteLiteral("\r\n");
             
             #line 4 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Text.cshtml"
   
-    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
+    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag);
 
             
             #line default
             #line hidden
 WriteLiteral("\r\n\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 158), Tuple.Create("\"", 259)
-, Tuple.Create(Tuple.Create("", 166), Tuple.Create("form-group", 166), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 124), Tuple.Create("\"", 225)
+, Tuple.Create(Tuple.Create("", 132), Tuple.Create("form-group", 132), true)
             
             #line 8 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Text.cshtml"
-, Tuple.Create(Tuple.Create(" ", 176), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
+, Tuple.Create(Tuple.Create(" ", 142), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
+            
+            #line default
+            #line hidden
+, 143), false)
+            
+            #line 8 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Text.cshtml"
+, Tuple.Create(Tuple.Create(" ", 176), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
             
             #line default
             #line hidden
 , 177), false)
-            
-            #line 8 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Text.cshtml"
-, Tuple.Create(Tuple.Create(" ", 210), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
-            
-            #line default
-            #line hidden
-, 211), false)
 );
 
 WriteLiteral(">\r\n\r\n");
@@ -101,14 +101,14 @@ WriteLiteral(">\r\n\r\n");
             #line hidden
             
             #line 14 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Text.cshtml"
-       Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
+       Write(Html.LabelFor(m => m, templateHelper.LabelHtmlAttributes));
 
             
             #line default
             #line hidden
             
             #line 14 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Text.cshtml"
-                                                                                                    ;
+                                                                      ;
         }
         else
         {
@@ -118,14 +118,14 @@ WriteLiteral(">\r\n\r\n");
             #line hidden
             
             #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Text.cshtml"
-       Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
+       Write(Html.LabelFor(m => m, templateHelper.LabelHtmlAttributes));
 
             
             #line default
             #line hidden
             
             #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Text.cshtml"
-                                                                                                    ;
+                                                                      ;
             
             
             #line default
@@ -148,14 +148,14 @@ WriteLiteral(">\r\n\r\n");
             #line hidden
             
             #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Text.cshtml"
-   Write(Html.TextBoxFor(m => m, new { @class = "form-control" }));
+   Write(Html.TextBoxFor(m => m, templateHelper.InputHtmlAttributes));
 
             
             #line default
             #line hidden
             
             #line 22 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Text.cshtml"
-                                                                 ;
+                                                                    ;
         
             
             #line default
@@ -190,8 +190,6 @@ WriteLiteral(">\r\n\r\n");
             #line default
             #line hidden
 WriteLiteral("   \r\n</div>\r\n\r\n");
-
-WriteLiteral("\r\n");
 
         }
     }

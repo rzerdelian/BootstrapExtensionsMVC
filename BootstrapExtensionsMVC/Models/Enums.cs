@@ -70,7 +70,10 @@ namespace BootstrapExtensionsMVC.Models
         Dropdown,
 
         [Display(Name= "nav")]
-        Nav
+        Nav,
+
+        [Display(Name="input-group")]
+        InputGroup
     }
 
     internal enum Tags

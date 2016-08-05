@@ -142,6 +142,7 @@
     <Compile Include="Models\Column.cs" />
     <Compile Include="Models\Dropdown.cs" />
     <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\InputGroup.cs" />
     <Compile Include="Models\Label.cs" />
     <Compile Include="Models\Modal.cs" />
     <Compile Include="Models\Nav.cs" />
@@ -233,11 +234,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Url.cshtml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Shared\EditorTemplates\_generic.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_generic.cshtml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -314,10 +310,6 @@
     <Content Include="Views\Shared\EditorTemplates\Timespan.cshtml">
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Timespan.generated.cs</LastGenOutput>
-    </Content>
-    <Content Include="Views\Shared\EditorTemplates\_generic.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>_generic.generated.cs</LastGenOutput>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

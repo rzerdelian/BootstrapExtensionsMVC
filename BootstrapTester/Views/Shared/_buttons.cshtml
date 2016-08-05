@@ -1,0 +1,39 @@
+﻿@model BootstrapTester.Models.BootstrapSampleObject
+
+<h2>Buttons</h2>
+<div class="row">
+    <div class="col-md-6">
+
+        <div class="row">
+            @foreach (var style in Model.ButtonStyles)
+            {
+                @Html.Bootstrap().Button(style.Key, style.Value)
+            }
+        </div>
+
+        <div class="row">
+            @foreach (var style in Model.ButtonStyles)
+            {
+                @Html.Bootstrap().Button(style.Key, style.Value).AsDisabled()
+            }
+        </div>
+
+        <div class="row">
+            @foreach (var size in Model.ButtonSizes)
+            {
+                @Html.Bootstrap().Button(size.Key, ButtonStyles.Default, size.Value)
+            }
+        </div>
+
+        <div class="row">
+            @foreach (var style in Model.ButtonStyles)
+            {
+                @Html.Bootstrap().Dropdown(style.Key,
+                                new ListItem[] {
+                                Html.Bootstrap().ListItem("Item 1", "#"),
+                                Html.Bootstrap().ListItem("Item 2", "#") }, style.Value)
+            }
+        </div>
+
+    </div>
+</div>

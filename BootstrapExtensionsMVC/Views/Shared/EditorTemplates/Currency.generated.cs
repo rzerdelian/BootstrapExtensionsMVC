@@ -41,29 +41,29 @@ namespace BootstrapExtensionsMVC.Views.Shared.EditorTemplates
             
             #line 3 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
   
-    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag.formGroupSize, ViewBag.labelWidth);
+    var templateHelper = new BootstrapExtensionsMVC.Helpers.EditorTemplateHelper(ViewBag);
 
             
             #line default
             #line hidden
 WriteLiteral("\r\n\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 156), Tuple.Create("\"", 257)
-, Tuple.Create(Tuple.Create("", 164), Tuple.Create("form-group", 164), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 122), Tuple.Create("\"", 223)
+, Tuple.Create(Tuple.Create("", 130), Tuple.Create("form-group", 130), true)
             
             #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
-, Tuple.Create(Tuple.Create(" ", 174), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
+, Tuple.Create(Tuple.Create(" ", 140), Tuple.Create<System.Object, System.Int32>(templateHelper.FormGroupCssClass
+            
+            #line default
+            #line hidden
+, 141), false)
+            
+            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
+, Tuple.Create(Tuple.Create(" ", 174), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
             
             #line default
             #line hidden
 , 175), false)
-            
-            #line 7 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
-, Tuple.Create(Tuple.Create(" ", 208), Tuple.Create<System.Object, System.Int32>(Html.ValidationErrorFor(m => m, " has-error")
-            
-            #line default
-            #line hidden
-, 209), false)
 );
 
 WriteLiteral(">\r\n\r\n");
@@ -93,20 +93,20 @@ WriteLiteral(">\r\n\r\n");
             
             #line 12 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
                                                   ;
-        
+            
             
             #line default
             #line hidden
             
             #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
-   Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
+       Write(Html.LabelFor(m => m, templateHelper.LabelHtmlAttributes));
 
             
             #line default
             #line hidden
             
             #line 13 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
-                                                                                                ;
+                                                                      ;
         }
         else
         {
@@ -116,28 +116,28 @@ WriteLiteral(">\r\n\r\n");
             #line hidden
             
             #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
-       Write(Html.LabelFor(m => m, new { @class = "control-label " + templateHelper.LabelCssClass }));
+       Write(Html.LabelFor(m => m, templateHelper.LabelHtmlAttributes));
 
             
             #line default
             #line hidden
             
             #line 17 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
-                                                                                                    ;
-        
+                                                                      ;
+            
             
             #line default
             #line hidden
             
             #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
-   Write(Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + "\">"));
+       Write(Html.Raw("<div class=\"" + @templateHelper.FieldCssClass + "\">"));
 
             
             #line default
             #line hidden
             
             #line 18 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
-                                                                          ;
+                                                                              ;
         }
 
         
@@ -146,14 +146,14 @@ WriteLiteral(">\r\n\r\n");
             #line hidden
             
             #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
-   Write(Html.TextBoxFor(m => m, new { @class = "form-control" }));
+   Write(Html.TextBoxFor(m => m, templateHelper.InputHtmlAttributes));
 
             
             #line default
             #line hidden
             
             #line 21 "C:\Users\rich\My Dev Space\trunk\BootstrapExtensionsMVC\BootstrapExtensionsMVC\Views\Shared\EditorTemplates\Currency.cshtml"
-                                                                 ;
+                                                                    ;
         
             
             #line default
