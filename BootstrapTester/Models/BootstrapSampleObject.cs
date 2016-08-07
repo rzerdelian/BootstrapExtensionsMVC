@@ -93,6 +93,37 @@ namespace BootstrapTester.Models
             return dic;
         }
 
+        public Colors GetColorFromButtonStyle(ButtonStyles style)
+        {
+            switch (style)
+            {
+                case BootstrapExtensionsMVC.Models.ButtonStyles.Danger:
+                    {
+                        return BootstrapExtensionsMVC.Models.Colors.Danger;
+                    }
+                case BootstrapExtensionsMVC.Models.ButtonStyles.Primary:
+                    {
+                        return BootstrapExtensionsMVC.Models.Colors.Primary;
+                    }
+                case BootstrapExtensionsMVC.Models.ButtonStyles.Info:
+                    {
+                        return BootstrapExtensionsMVC.Models.Colors.Info;
+                    }
+                case BootstrapExtensionsMVC.Models.ButtonStyles.Warning:
+                    {
+                        return BootstrapExtensionsMVC.Models.Colors.Warning;
+                    }
+                case BootstrapExtensionsMVC.Models.ButtonStyles.Success:
+                    {
+                        return BootstrapExtensionsMVC.Models.Colors.Success;
+                    }
+                default:
+                    {
+                        return BootstrapExtensionsMVC.Models.Colors.Default;
+                    }
+            }
+        }
+
         #endregion
     }
 }

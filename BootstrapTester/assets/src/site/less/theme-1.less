@@ -1,0 +1,163 @@
+﻿@import "../../bootstrap/less/bootstrap.less";
+
+/*@import "bootstrap-default.less";*/
+
+
+@import "../../bootstrap-datetimepicker/less/bootstrap-datetimepicker-build.less";
+@import "../../botstrap-checkboxes/awesome-bootstrap-checkbox.less";
+@import "../../bootstrap/less/theme.less";
+
+/*@import "../../hover/less/hover.less";*/
+
+@state-success-text:             darken(@brand-success, 20%); //#3c763d;
+@state-success-bg:               lighten(@brand-success, 40%); //#dff0d8;
+@state-success-border:          darken(@state-success-bg, 20%);  //darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text:                #31708f;
+@state-info-bg:                  #d9edf7;
+@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+
+@state-warning-text:             #8a6d3b;
+@state-warning-bg:               #fcf8e3;
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+
+@state-danger-text:              #a94442;
+@state-danger-bg:                #f2dede;
+@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
+
+
+/*body{
+    #gradient > .vertical(@start-color: #fff; @end-color: #eee);
+}*/
+
+.container {
+    /*background-color:#fff;*/
+}
+
+.row {
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+
+div.dropdown {
+    display:inline-block;
+}
+
+
+
+/*.btn-primary ~ .dropdown-menu,
+.btn-primary ~ .dropdown-menu > li {
+    background-color: @brand-primary !important;
+
+    & > dropdown-submenu {
+        background-color: @brand-primary !important;
+    }
+}*/
+
+.dropdown-submenu {
+    position: relative;
+
+    
+
+    & > .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -6px;
+        margin-left: -1px;
+        -webkit-border-radius: 0 6px 6px 6px;
+        -moz-border-radius: 0 6px 6px;
+        border-radius: 0 6px 6px 6px;
+    }
+
+    &:hover {
+        & >.dropdown-menu {
+            display: block;
+        }
+
+        &>a:after {
+            border-left-color: #fff;
+        }
+    }
+
+    & >a:after {
+        display: block;
+        content: " ";
+        float: right;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-left-color: #ccc;
+        margin-top: 5px;
+        margin-right: -10px;
+    }
+
+    &.pull-left {
+        float: none;
+        &>.dropdown-menu {
+            left: -100%;
+            margin-left: 10px;
+            -webkit-border-radius: 6px 0 6px 6px;
+            -moz-border-radius: 6px 0 6px 6px;
+            border-radius: 6px 0 6px 6px;
+        }
+    }
+}
+
+
+
+//  added panel style for modals
+
+.modal-heading-styles(@bg-color, @text-color) {
+  #gradient > .vertical(@start-color: darken(@bg-color, 15%); @end-color: @bg-color);
+  color: @text-color;
+}
+
+// Apply the mixin to the modal headings only
+.modal-default.modal-header   { .modal-heading-styles(@panel-default-heading-bg, @panel-default-text); }
+.modal-primary.modal-header   { .modal-heading-styles(@panel-primary-heading-bg, @panel-primary-text); }
+.modal-success.modal-header   { .modal-heading-styles(@panel-success-heading-bg, @panel-success-text); }
+.modal-info.modal-header      { .modal-heading-styles(@panel-info-heading-bg, @panel-info-text); }
+.modal-warning.modal-header   { .modal-heading-styles(@panel-warning-heading-bg, @panel-warning-text); }
+.modal-danger.modal-header    { .modal-heading-styles(@panel-danger-heading-bg, @panel-danger-text); }
+
+.alert-with-icon(@icon-unicode) {
+    content:  "@{icon-unicode} \00a0 \00a0";
+    font-family:'FontAwesome';
+    font-size: x-large;
+    display:inline-block;
+    float:left;
+    line-height: 0.9;
+}
+
+//f129 
+/*.alert-info::before{ .alert-with-icon("\f05a"); }*/
+.alert-info.with-icon::before{ .alert-with-icon("\00a0 \f129"); }
+.alert-danger.with-icon::before{ .alert-with-icon("\f071"); }
+.alert-success.with-icon::before{ .alert-with-icon("\f164"); }
+.alert-warning.with-icon::before{ .alert-with-icon("\00a0 \f12a"); }
+
+/*h1 {
+    
+    border-bottom: 1px solid @gray-light;
+
+    &::before {
+        content: "\00a0";
+    }
+}*/
+
+@import "../../hover/less/_mixins.less";
+@import "../../hover/less/_options.less";
+@import "../../hover/less/_hacks.less";
+@import "../../hover/less/effects/border-transitions/_overline-from-left.less";
+
+.nav.navbar-nav > li > a.navbar-link, 
+.nav-pills > li > a
+{
+    .overline-from-left();
+}
+ 
+/*.btn { 
+    .shadow();
+}*/

@@ -28,7 +28,8 @@ namespace BootstrapExtensionsMVC.Models
             {
                 TagBuilder headerTag = new TagBuilder("div");
                 headerTag.AddCssClass("modal-header");
-                string style = (color == Colors.Default ? "" : "bg-" + color.DisplayName());
+                //string style = (color == Colors.Default ? "" : "modal-" + color.DisplayName());
+                string style = "modal-" + color.DisplayName();
                 headerTag.AddCssClass(style);
                 headerTag.InnerHtml = string.Format("<button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button><span class=\"h2\">{0}</span>", headerText);
 

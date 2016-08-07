@@ -82,9 +82,9 @@ namespace BootstrapExtensionsMVC
             return new Nav(links, navType, isFixed);
         }
 
-        public IHtmlString Alert(string text, AlertStyles style = AlertStyles.Danger, bool dismissable = true)
+        public IHtmlString Alert(string text, AlertStyles style = AlertStyles.Danger, bool dismissable = true, object htmlAttributes = null)
         {
-            return new Alert(viewContext, style, text, dismissable);
+            return new Alert(viewContext, style, text, dismissable, htmlAttributes);
         }
 
         public IHtmlString Row(object htmlAttributes = null, IEnumerable<IHtmlString> children = null)

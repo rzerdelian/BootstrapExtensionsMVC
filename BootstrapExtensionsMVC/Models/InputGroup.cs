@@ -10,12 +10,12 @@ namespace BootstrapExtensionsMVC.Models
     public class InputGroup<TModel, TValue>: BootstrapComponent
     {
 
-        internal InputGroup(ViewContext viewContext, Expression<Func<TModel, TValue>> expr)
+        internal InputGroup(HtmlHelper helper, Expression<Func<TModel, TValue>> expr)
             : base(Tags.Div, BootstrapElements.InputGroup)
         {
 
             
-            //ModelMetadata meta = ModelMetadata.FromLambdaExpression<TModel, TValue>(expr, viewContext.ViewData);
+            //ModelMetadata meta = ModelMetadata.FromLambdaExpression<TModel, TValue>(expr );
         }
 
     }
